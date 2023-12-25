@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone Repository - 100th GitHub Repository</title>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark text */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff; /* GitHub blue */
+            text-align: center;
+        }
+
+        #snippets-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .snippet {
+            width: 45%;
+            margin: 10px;
+            padding: 15px;
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-snippet,
+        .ml-snippet,
+        .cybersecurity-snippet,
+        .ai-snippet {
+            width: 95%;
+            margin: 10px;
+            padding: 15px;
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Celebrating My 100th GitHub Repository!</h1>
+
+    <div id="snippets-container">
+        <!-- Game Development -->
+        <div class="snippet game-snippet">
+            <h2>Game Development</h2>
+            <p>Simple HTML5 Game</p>
+            <code>
+                &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                &nbsp;&nbsp;&lt;title&gt;My Game&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &nbsp;&nbsp;&lt;canvas id="gameCanvas" width="800" height="600"&gt;&lt;/canvas&gt;<br>
+                &nbsp;&nbsp;&lt;script src="game.js"&gt;&lt;/script&gt;<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="snippet ml-snippet">
+            <h2>Machine Learning</h2>
+            <p>Image Recognition with TensorFlow.js</p>
+            <code>
+                const model = await tf.loadLayersModel('model.json');<br>
+                const image = document.getElementById('inputImage');<br>
+                const tensor = tf.browser.fromPixels(image);<br>
+                const resized = tf.image.resizeBilinear(tensor, [224, 224]);<br>
+                const expanded = resized.expandDims(0);<br>
+                const prediction = await model.predict(expanded);<br>
+                const classIndex = tf.argMax(prediction, 1).dataSync();<br>
+                console.log('Predicted Class:', classIndex);
+            </code>
+            <img src="example_image.jpg" alt="Example Image" width="100%">
+        </div>
+
+        <!-- Cybersecurity Tool -->
+        <div class="snippet cybersecurity-snippet">
+            <h2>Cybersecurity Tool</h2>
+            <p>Secure Password Generator</p>
+            <code>
+                function generatePassword(length) {<br>
+                &nbsp;&nbsp;const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';<br>
+                &nbsp;&nbsp;let password = '';<br>
+                &nbsp;&nbsp;for (let i = 0; i < length; i++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;const randomIndex = Math.floor(Math.random() * charset.length);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;password += charset.charAt(randomIndex);<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;return password;<br>
+                }<br>
+                const securePassword = generatePassword(12);<br>
+                console.log('Secure Password:', securePassword);
+            </code>
+        </div>
+
+        <!-- Artificial Intelligence -->
+        <div class="snippet ai-snippet">
+            <h2>Artificial Intelligence</h2>
+            <p>Sentiment Analysis with NLTK</p>
+            <code>
+                from nltk.sentiment import SentimentIntensityAnalyzer<br>
+                analyzer = SentimentIntensityAnalyzer()<br>
+                text = "I love working on AI projects!"<br>
+                score = analyzer.polarity_scores(text)<br>
+                print('Sentiment Score:', score)
+            </code>
+        </div>
+    </div>
+</body>
+</html>
